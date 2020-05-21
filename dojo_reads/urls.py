@@ -17,5 +17,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('login.urls')),
-    path('/forum', include('forum.urls'))
+    path('forum/', include('forum.urls'))
 ]

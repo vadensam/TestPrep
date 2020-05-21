@@ -32,7 +32,7 @@ def login(request):
 
         if bcrypt.checkpw(request.POST['password'].encode(), log_user.password.encode()):
             request.session['id'] = log_user.id
-            return redirect('/books')
+            return redirect('forum/books')
 
     messages.error(request, 'Incorrect email or password.')
     return redirect('/')
